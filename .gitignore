@@ -1,0 +1,16 @@
+# Gereksiz kütüphaneler
+node_modules/
+
+# Derlenmiş dosyalar (exe, dmg vs.)
+dist/
+build/
+out/
+
+# Sistem dosyaları
+.DS_Store
+Thumbs.db
+
+# Loglar
+*.log
+*.exe
+*.dmg

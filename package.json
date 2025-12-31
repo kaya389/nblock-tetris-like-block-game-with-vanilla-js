@@ -1,0 +1,36 @@
+{
+  "name": "nblock",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "electron": "^39.0.0",
+    "electron-builder": "^26.0.12"
+  },
+  "build": {
+    "appId": "com.nblock.nblock",
+    "productName": "nblock",
+    "copyright": "Copyright © 2025 kaya",
+    "win": {
+      "target":[
+        "nsis",
+        "portable"
+      ],
+      "icon": "build/icon.ico"
+    },
+    "files": [
+      "**/*"
+    ],
+    "directories": {
+      "output": "dist"
+    } 
+  }
+}

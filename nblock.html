@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>nblock</title>
+        <link rel="stylesheet" href="nblock.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=535, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    </head>
+
+    <body>
+        <div class="main-screen">
+            <div class="score-area">
+                <div class="template"><button class="pes"onclick="pesEdiyorum();">Pes Ediyorum</button>
+                </div>
+                <div class="score">score</div>
+                <div class="settings"><button onclick="nasilOynanir()" class="nasil">Nasıl Oynanır?</button></div>
+            </div>
+
+            <div class="game-area">
+    
+            </div>
+            
+            <div id="videoModal" class="modal">
+                <p class="son-skor">Skor: </p>
+                <span onclick="tekrarOyna()" class="close-button" id="closeButton">tekrar?</span>
+                <span onclick="cik()" class="close-button2" id="closeButton">çık:C</span>
+                <video id="myVideoPlayer" width="100%" controls>
+                    <source src="mukremin.mp4" type="video/mp4">
+                </video>
+
+                
+            </div>
+            <div class="suggestions">
+                <div class="void"></div>
+                <div class="suggestion-1">
+                </div>
+                <div class="void"></div>
+                <div class="suggestion-2"
+                ></div>
+                <div class="void"></div>
+                <div class="suggestion-3"
+                ></div>
+                <div class="void"></div>
+            </div>
+
+            <div class="game-name">
+                NBLOCK ❤️
+            </div>
+        </div>
+
+        <script src="nblock.js"></script>
+    </body>
+</html>
+
+<!--
+yamuk base up orie
+      2    2
+      aynıysa sola döndürme dik yeter
+      farklıysa sol + aşağı + yukarı
+
+cross base up
+      ikisi de ya tek ya çift sayı olcak
+
+square sadece 3,4,5
+
+zShape
+    left middle    right reverse orientation
+    1    min2 max5   1
+    1                2
+    1                3
+    2                1
+    2                2
+    3                1
+-->

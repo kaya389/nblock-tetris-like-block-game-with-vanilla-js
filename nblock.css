@@ -1,0 +1,173 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 900;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    background-image: url(cicek-background.png);
+    height: 97vh;
+}
+html{
+    width: 535px;
+    height: 720px;  
+    overflow: hidden;
+    display: flex;
+}
+/**/
+.main-screen{
+    display: grid;
+    height: 97vh;
+    grid-template-rows: 1fr 6fr 3fr 1fr;
+}
+/**/
+.pes, .nasil{
+    border-radius: 10px;
+    background-color: black;
+    color: blanchedalmond;
+}
+/**/
+.score-area{
+    border-top-left-radius: 70px;
+    border-top-right-radius: 70px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    background-color: blanchedalmond;
+}
+.template, .score, .settings{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/**/
+.game-area{
+    background-color: rgb(250, 235, 215);
+    display: grid;
+    grid-template-rows: repeat(20, 1fr);
+    grid-template-columns: repeat(20, 1fr);
+}
+@keyframes fire-flicker {
+    0% {
+        box-shadow: inset 0 0 5px 2px rgba(255, 69, 0, 1);
+    }
+    50% {
+        box-shadow: inset 0 0 8px 3px rgba(255, 165, 0, 0.2);
+    }
+    100% {
+        box-shadow: inset 0 0 6px 2px rgb(250, 235, 215);
+    }
+}
+.border-top {
+    box-shadow: inset 0 3px 0 0px rgba(255, 69, 0, 0.5);
+    animation: fire-flicker 10s infinite alternate; 
+}
+.border-bottom {
+    box-shadow: inset 0 -3px 0 0px rgba(255, 69, 0, 0.5);
+    animation: fire-flicker 10s infinite alternate; 
+}
+.border-left {
+    box-shadow: inset 3px 0 0 0px rgba(255, 69, 0, 0.5);
+    animation: fire-flicker 10s infinite alternate; 
+}
+.border-right {
+    box-shadow: inset -3px 0 0 0px rgba(255, 69, 0, 0.5);
+    animation: fire-flicker 10s infinite alternate; 
+}
+.small-block{
+    background-color: antiquewhite;
+    border: rgb(240, 217, 142), solid, 1px;
+    width: 24px;
+    height: 24px;
+    position: relative;
+}
+/**/
+.suggestions{
+    padding: 10px;
+    background-color: rgb(237, 197, 139);
+    display: grid;
+    grid-template-columns: 0.5fr 16fr 0.5fr 16fr 0.5fr 16fr 0.5fr;
+}
+
+.suggestion-1, .suggestion-2, .suggestion-3{
+    display: grid;
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-columns: repeat(5, 1fr);
+}
+.suggestion-1{
+    background-image: url(mukremin1.png);
+    background-size: 80px;
+    background-repeat: no-repeat;
+    background-position: 70px;
+    opacity: 0.3;
+}
+.suggestion-2{
+    background-image: url(mukremin2.png);
+    background-size: 150px;
+    background-repeat: no-repeat;
+    opacity: 0.3;
+}
+.suggestion-3{
+    background-image: url(mukremin3.png);
+    background-size: 90px;
+    background-repeat: no-repeat;
+    opacity: 0.3;
+}
+/**/
+.game-name{
+    background-color: rgb(237, 237, 152);
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    border-bottom-left-radius: 100px;
+    border-bottom-right-radius: 100px;
+}
+
+.modal {
+    border-radius: 20px;
+    padding-top: 100px;
+    padding-bottom: 95px;
+    opacity: 0.7;
+    transform: translateY(100px);
+    background-color: black;
+    display: none;
+    position: absolute;
+    z-index: 1000;
+    width: 500px;
+    transform: translateX(15px);
+    overflow: hidden;
+    padding-right: 5px;
+}
+#myVideoPlayer{
+    width: 200px;
+    transform: translateX(6px);
+}
+.son-skor{
+    color: brown;
+}
+/* Kapatma düğmesi stili */
+.close-button {
+    padding-top: 160px;
+    transform: translateX(10px);
+    padding-top: 160px;
+    color: red;
+    float: right;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close-button2{
+    transform: translateX(310px);
+    padding-top: 160px;
+    color: red;
+    float: right;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close-button:hover,
+.close-button:focus, .close-button2:hover, .close-button:focus {
+    color: red;
+    text-decoration: none;
+    cursor: pointer;
+}
